@@ -6,5 +6,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="TP1_pythonScraping" />
+    <orderEntry type="module" module-name="TD1_exploitation" />
   </component>
 </module>
