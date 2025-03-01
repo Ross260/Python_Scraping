@@ -1,8 +1,9 @@
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
-#les deux bibliothèques pour l'attente du chargement des infos de la pages
+# les deux bibliothèques pour l'attente du chargement des infos de la pages
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -26,9 +27,7 @@ time.sleep(1)
 search_box.send_keys(Keys.RETURN)
 time.sleep(5)  # Attendre le chargement des résultats
 
-
-
-#-------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------
 # Attendre que la liste des résultats soit visible
 WebDriverWait(driver, 10).until(
     EC.presence_of_all_elements_located((By.XPATH, '//div[@itemprop="itemListElement"]'))
@@ -49,9 +48,7 @@ print("Top 5 logements Airbnb à Paris :")
 for i, listing in enumerate(listings, 1):
     print(f"Résultat {i}: {listing.text}")  # Affiche le texte du bloc trouvé
     print(" ")
-#---------------------------------------------------------------------------------------------
-
-
+# ---------------------------------------------------------------------------------------------
 
 # Fermer le navigateur
 driver.quit()
